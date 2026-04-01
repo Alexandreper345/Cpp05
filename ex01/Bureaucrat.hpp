@@ -18,6 +18,7 @@ public:
 	void	decrement(void);
 	Bureaucrat(std::string name, int grade);
 	Bureaucrat(const Bureaucrat &other);
+	
 	~Bureaucrat();
 	class GradeTooHighException : public std::exception
 	{
