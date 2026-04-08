@@ -14,10 +14,12 @@ private:
 	const int	grade_execut;
 public:
 	std::string get_name() const;
-	bool get_is_assign();
-	int	get_grade_sign();
-	int	get_grade_execut();
-	Form();
+	bool get_is_assign() const;
+	int	get_grade_sign() const;
+	int	get_grade_execut() const;
+	Form(const Form &other);
+	void beSigned(Bureaucrat const &bureaucrat);
+	Form(std::string name, bool is_assign, int grade_sign, int grade_execut);
 	~Form();
 
 	class GradeTooHighException : public std::exception
@@ -25,7 +27,7 @@ public:
 		public:
 			GradeTooHighException() {}
 			virtual const char* what() const throw() {
-				return "Grade too hight!";
+				return "Grade too high!";
 			}
 			virtual ~GradeTooHighException() throw(){}
 	};

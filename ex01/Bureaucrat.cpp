@@ -39,4 +39,13 @@ int	Bureaucrat::getgrade() const
 	return this->grade;
 }
 
+void Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << 
+	}
+}
+
 Bureaucrat::~Bureaucrat(){}

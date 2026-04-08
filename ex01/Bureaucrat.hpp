@@ -18,8 +18,9 @@ public:
 	void	decrement(void);
 	Bureaucrat(std::string name, int grade);
 	Bureaucrat(const Bureaucrat &other);
-	
+	void signForm(Form &form);
 	~Bureaucrat();
+
 	class GradeTooHighException : public std::exception
 	{
 		public:
