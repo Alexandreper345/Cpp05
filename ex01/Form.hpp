@@ -4,6 +4,9 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -12,15 +15,19 @@ private:
 	bool is_assign;
 	const int	grade_sign;
 	const int	grade_execut;
+
 public:
+	Form(std::string name, int grade_sign, int grade_execut);
+	Form(const Form &other);
+	~Form();
+	
 	std::string get_name() const;
 	bool get_is_assign() const;
 	int	get_grade_sign() const;
 	int	get_grade_execut() const;
-	Form(const Form &other);
+	Form &operator=(const Form &other);
+	
 	void beSigned(Bureaucrat const &bureaucrat);
-	Form(std::string name, bool is_assign, int grade_sign, int grade_execut);
-	~Form();
 
 	class GradeTooHighException : public std::exception
 	{
