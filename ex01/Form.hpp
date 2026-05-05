@@ -17,6 +17,7 @@ private:
 	const int	grade_execut;
 
 public:
+	Form();
 	Form(std::string name, int grade_sign, int grade_execut);
 	Form(const Form &other);
 	~Form();
