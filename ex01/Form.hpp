@@ -6,8 +6,6 @@
 #include <exception>
 #include "Bureaucrat.hpp"
 
-class Bureaucrat;
-
 class Form
 {
 private:
